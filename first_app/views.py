@@ -5,7 +5,7 @@ from django.urls import reverse
 
 # Create your views here.
 def index(request):  #request yazmak zorunlu
-    return HttpResponse("bu benim ilk djanfo projem ve ilk indeksim")
+    return HttpResponse("bu benim ilk django projem ve ilk indeksim")
 
 # def python_course(request):
 #     return HttpResponse("Python Dersleri")
@@ -33,22 +33,7 @@ def courses(request,item):
 def carpmaIslemi(request,s1,s2):
     return HttpResponse(f"{s1} * {s2} = {s1*s2}")
 
-# def course_number_view(request,num1):#127.0.0.1/10 --> 127.0.0.1/kotlin
-#     if num1==10:
-#         return HttpResponseRedirect("/first_app/kotlin") #return HttpResponseRedirect("kotlin") bunun yrine /first_app/kotlin yazdım
-#     #şu alttaki elseyi yazmazsan server 500 yazar onun yerine kendi mesajımı yazıyırum
-#     else:
-#         return HttpResponseNotFound("Not found! please look for another course")
-#şunu aşaığda düzeltiyorum sonraki çalışma için
 
-# def course_number_view(request,num1):#127.0.0.1/10 --> 127.0.0.1/kotlin
-#     course_list=list(course_information.keys())
-#     course=course_list[num1] #şuraya dikkat eet  [] parantezle yaz, normal () değil.
-#     return HttpResponseRedirect(f"/first_app/{course}")#return HttpResponseRedirect(course) yazdığımda yine 127.0.0.1/0 yerine 127.0.0.1/0/kotlin yazıyor ama ben 127.0.0.1/kotlinw gitsin istemiştim ondan dolaı değiştirdim bunu
-# #bunu böyle yazınca listem dışındaki bir rakam kullanınca server500 hatasıı olur ama bu da çok sıkıntılı bunu füzeltmemiz lazım
-# #işte burada name=carpma  gibi isimleri kullanma zamanı geldi
-
-#şimdi de en düzgün halini yazmak için reverse kullanırız burdada bize name kısmı öenmli
 
 def course_number_view(request,num1):#127.0.0.1/10 --> 127.0.0.1/kotlin
     
